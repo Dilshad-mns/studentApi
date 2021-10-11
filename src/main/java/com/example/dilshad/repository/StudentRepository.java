@@ -5,11 +5,13 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.example.dilshad.model.Student;
+
 @Repository
 public class StudentRepository {
-	private List<String> students = Arrays.asList("Dilshad", "Shabaz", "Afzal");
+	private List<Student> students = Arrays.asList(Student.builder().name("Dilshad").address("Rishikesh").build());
 	
-	public List<String> getStudents(){
+	public List<Student> getStudents(){
 		return students;
 	}
  }

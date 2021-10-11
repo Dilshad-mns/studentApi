@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.dilshad.model.Student;
 import com.example.dilshad.service.StudentService;
 
 @RestController
@@ -18,7 +19,7 @@ public class StudentController {
 	private StudentService studentService;
 	
 	@GetMapping("students")
-	public List<String> getStudentList(){
+	public List<Student> getStudentList(){
 		return studentService.getStudents();
 //		return Arrays.asList("Dilshad");
 	}
